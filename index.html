@@ -85,12 +85,12 @@
             border-color: var(--gold-accent);
         }
 
-        /* Cover Photo Section (Uses photo4.jpg) + Subtle Dew/Mist Animation */
+        /* Cover Photo Section (Uses photo4.jpg) + Dew/Mist + Santa Sleigh Animation */
         .hero-cover {
             position: relative;
             width: 100%;
-            height: 420px;
-            background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.55)), url('photo4.jpg') center/cover no-repeat;
+            height: 430px;
+            background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.52)), url('photo4.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -98,7 +98,7 @@
             text-align: center;
             color: var(--white);
             padding: 20px;
-            overflow: hidden;
+            overflow: hidden; /* Cover photo eken pita noya thaba ganee */
         }
 
         /* Soft morning mist/dew overlay */
@@ -106,14 +106,14 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.14), transparent 45%),
-                        radial-gradient(circle at 80% 70%, rgba(224, 247, 250, 0.12), transparent 50%);
+            background: radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.18), transparent 45%),
+                        radial-gradient(circle at 80% 70%, rgba(224, 247, 250, 0.16), transparent 50%);
             animation: mistDrift 8s ease-in-out infinite alternate;
             pointer-events: none;
             z-index: 1;
         }
 
-        /* Falling light dew drops layer */
+        /* Falling dew drops layer (Increased count) */
         .dew-layer {
             position: absolute;
             inset: 0;
@@ -124,26 +124,84 @@
 
         .dew-drop {
             position: absolute;
-            top: -15px;
+            top: -16px;
             width: 5px;
             height: 8px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.55);
-            box-shadow: 0 0 6px rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.68);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.45);
             animation: dewFall linear infinite;
         }
 
-        .dew-drop:nth-child(1) { left: 8%; animation-duration: 7.5s; animation-delay: 0s; width: 4px; height: 6px; }
-        .dew-drop:nth-child(2) { left: 17%; animation-duration: 9.5s; animation-delay: 1.5s; opacity: 0.35; }
-        .dew-drop:nth-child(3) { left: 26%; animation-duration: 8.2s; animation-delay: 3s; width: 5px; height: 8px; }
-        .dew-drop:nth-child(4) { left: 35%; animation-duration: 10s; animation-delay: 0.8s; width: 4px; height: 6px; }
-        .dew-drop:nth-child(5) { left: 44%; animation-duration: 7.8s; animation-delay: 2.2s; }
-        .dew-drop:nth-child(6) { left: 53%; animation-duration: 9.2s; animation-delay: 4s; width: 4px; height: 6px; }
-        .dew-drop:nth-child(7) { left: 62%; animation-duration: 8.6s; animation-delay: 1.2s; width: 5px; height: 8px; }
-        .dew-drop:nth-child(8) { left: 71%; animation-duration: 10.5s; animation-delay: 2.8s; width: 4px; height: 6px; }
-        .dew-drop:nth-child(9) { left: 80%; animation-duration: 8s; animation-delay: 0.4s; }
-        .dew-drop:nth-child(10) { left: 89%; animation-duration: 9.4s; animation-delay: 3.5s; width: 4px; height: 6px; }
-        .dew-drop:nth-child(11) { left: 95%; animation-duration: 8.4s; animation-delay: 1.9s; }
+        .dew-drop:nth-child(1)  { left: 4%;  animation-duration: 6.8s; animation-delay: 0.2s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(2)  { left: 8%;  animation-duration: 7.5s; animation-delay: 0s;    width: 4px; height: 6px; }
+        .dew-drop:nth-child(3)  { left: 12%; animation-duration: 8.8s; animation-delay: 2.4s; width: 6px; height: 9px; }
+        .dew-drop:nth-child(4)  { left: 17%; animation-duration: 9.5s; animation-delay: 1.5s; opacity: 0.45; }
+        .dew-drop:nth-child(5)  { left: 21%; animation-duration: 7.2s; animation-delay: 3.8s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(6)  { left: 26%; animation-duration: 8.2s; animation-delay: 3s;   width: 5px; height: 8px; }
+        .dew-drop:nth-child(7)  { left: 31%; animation-duration: 9.0s; animation-delay: 1.1s; width: 5px; height: 8px; }
+        .dew-drop:nth-child(8)  { left: 35%; animation-duration: 10s;  animation-delay: 0.8s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(9)  { left: 39%; animation-duration: 7.6s; animation-delay: 4.2s; width: 6px; height: 9px; }
+        .dew-drop:nth-child(10) { left: 44%; animation-duration: 7.8s; animation-delay: 2.2s; }
+        .dew-drop:nth-child(11) { left: 48%; animation-duration: 8.5s; animation-delay: 0.6s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(12) { left: 53%; animation-duration: 9.2s; animation-delay: 4s;   width: 4px; height: 6px; }
+        .dew-drop:nth-child(13) { left: 57%; animation-duration: 7.4s; animation-delay: 1.7s; width: 5px; height: 8px; }
+        .dew-drop:nth-child(14) { left: 62%; animation-duration: 8.6s; animation-delay: 1.2s; width: 5px; height: 8px; }
+        .dew-drop:nth-child(15) { left: 66%; animation-duration: 9.7s; animation-delay: 3.1s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(16) { left: 71%; animation-duration: 10.5s;animation-delay: 2.8s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(17) { left: 75%; animation-duration: 7.9s; animation-delay: 0.9s; width: 6px; height: 9px; }
+        .dew-drop:nth-child(18) { left: 80%; animation-duration: 8s;   animation-delay: 0.4s; }
+        .dew-drop:nth-child(19) { left: 84%; animation-duration: 8.9s; animation-delay: 2.5s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(20) { left: 89%; animation-duration: 9.4s; animation-delay: 3.5s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(21) { left: 92%; animation-duration: 7.3s; animation-delay: 1.4s; width: 5px; height: 8px; }
+        .dew-drop:nth-child(22) { left: 95%; animation-duration: 8.4s; animation-delay: 1.9s; }
+        .dew-drop:nth-child(23) { left: 15%; animation-duration: 6.9s; animation-delay: 4.6s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(24) { left: 42%; animation-duration: 8.3s; animation-delay: 5.1s; width: 5px; height: 8px; }
+        .dew-drop:nth-child(25) { left: 68%; animation-duration: 7.7s; animation-delay: 4.8s; width: 4px; height: 6px; }
+        .dew-drop:nth-child(26) { left: 86%; animation-duration: 9.1s; animation-delay: 5.4s; width: 5px; height: 8px; }
+
+        /* Santa Sleigh with Reindeer inside Cover Photo */
+        .santa-sleigh-layer {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .santa-sleigh-track {
+            position: absolute;
+            bottom: 24px;
+            left: 0;
+            width: 250px;
+            height: 76px;
+            animation: sleighAcrossCover 17s linear infinite;
+        }
+
+        .santa-sleigh-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
+            animation: sleighBob 2.2s ease-in-out infinite;
+        }
+
+        @keyframes sleighAcrossCover {
+            0% {
+                transform: translateX(-270px);
+            }
+            100% {
+                transform: translateX(calc(100vw + 270px));
+            }
+        }
+
+        @keyframes sleighBob {
+            0%, 100% {
+                transform: translateY(0px) rotate(-1deg);
+            }
+            50% {
+                transform: translateY(-6px) rotate(1.5deg);
+            }
+        }
 
         @keyframes dewFall {
             0% {
@@ -151,19 +209,19 @@
                 opacity: 0;
             }
             20% {
-                opacity: 0.55;
+                opacity: 0.7;
             }
             80% {
-                opacity: 0.35;
+                opacity: 0.45;
             }
             100% {
-                transform: translateY(430px) translateX(10px);
+                transform: translateY(440px) translateX(12px);
                 opacity: 0;
             }
         }
 
         @keyframes mistDrift {
-            0% { transform: scale(1) translateX(0px); opacity: 0.7; }
+            0% { transform: scale(1) translateX(0px); opacity: 0.75; }
             100% { transform: scale(1.06) translateX(-15px); opacity: 1; }
         }
 
@@ -381,6 +439,21 @@
             text-align: center;
         }
 
+        /* TikTok Video Box on Home Tab */
+        .tiktok-showcase {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1.5px dashed #c8e6c9;
+            text-align: center;
+        }
+
+        .tiktok-embed-wrapper {
+            margin-top: 18px;
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+        }
+
         /* Feature Two-Column Layout for Other Tabs */
         .split-section {
             display: grid;
@@ -456,11 +529,17 @@
 
         /* Responsive Mobile View */
         @media (max-width: 768px) {
-            .hero-cover { height: 320px; }
+            .hero-cover { height: 330px; }
             .hero-cover h1 { font-size: 1.95rem; }
             .split-section { grid-template-columns: 1fr; }
             .welcome-marquee-text { font-size: 1.15rem; }
             .top-contact-strip { justify-content: center; text-align: center; }
+
+            .santa-sleigh-track {
+                bottom: 14px;
+                width: 195px;
+                height: 60px;
+            }
 
             @keyframes dewFall {
                 0% {
@@ -468,13 +547,13 @@
                     opacity: 0;
                 }
                 20% {
-                    opacity: 0.55;
+                    opacity: 0.7;
                 }
                 80% {
-                    opacity: 0.35;
+                    opacity: 0.45;
                 }
                 100% {
-                    transform: translateY(330px) translateX(10px);
+                    transform: translateY(340px) translateX(12px);
                     opacity: 0;
                 }
             }
@@ -497,7 +576,7 @@
         </div>
     </div>
 
-    <!-- Cover Photo (photo4.jpg) with Subtle Dew/Mist Animation -->
+    <!-- Cover Photo (photo4.jpg) with Dew/Mist + Santa Sleigh Animation -->
     <header class="hero-cover">
         <div class="dew-layer" aria-hidden="true">
             <span class="dew-drop"></span>
@@ -511,315 +590,39 @@
             <span class="dew-drop"></span>
             <span class="dew-drop"></span>
             <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
+            <span class="dew-drop"></span>
         </div>
-        <h1>
-            <span class="si">සුන්දර රාජාංගනය</span>
-            <span class="en">Beautiful Rajanganaya</span>
-            <span class="ta">அழகிய ராஜாங்கனய</span>
-        </h1>
-        <p>
-            <span class="si">කෘෂිකර්මාන්තය, සොබාදහම සහ ඓතිහාසික උරුමයන්ගෙන් පිරි අනුරාධපුර දිස්ත්‍රික්කයේ සශ්‍රීක පුරවරය</span>
-            <span class="en">A fertile paradise in the Anuradhapura District rich in agriculture, nature, and historical heritage</span>
-            <span class="ta">அனுராதபுரம் மாவட்டத்தில் விவசாயம், இயற்கை மற்றும் வரலாற்று மரபுகளால் செழித்த அழகிய பிரதேசம்</span>
-        </p>
-    </header>
 
-    <!-- Right-to-Left Moving Text ("ආයුබෝවන් රාජාංගනය") -->
-    <div class="welcome-marquee-container">
-        <div class="welcome-marquee-text">
-            <span class="si">🙏 ආයුබෝවන් රාජාංගනය! සොබාදහමේ සුන්දරත්වය විඳගන්නට ඔබ සාදරයෙන් පිළිගනිමු... 🌾🌊</span>
-            <span class="en">🙏 Ayubowan Rajanganaya! Warmly welcoming you to experience the beauty of nature... 🌾🌊</span>
-            <span class="ta">🙏 ஆயுபோவன் ராஜாங்கனய! இயற்கையின் அழகை ரசிக்க உங்களை அன்புடன் வரவேற்கிறோம்... 🌾🌊</span>
-        </div>
-    </div>
-
-    <!-- Contact Details Placed Above Tabs -->
-    <div class="top-contact-strip">
-        <div class="contact-info-group">
-            <a href="mailto:info@rajanganaya.lk" class="contact-pill">
-                <i class="fas fa-envelope"></i>
-                <span>info@rajanganaya.lk</span>
-            </a>
-            <a href="tel:+94771234567" class="contact-pill">
-                <i class="fas fa-phone-alt"></i>
-                <span class="si">දුරකථනය: +94 77 123 4567</span>
-                <span class="en">Phone: +94 77 123 4567</span>
-                <span class="ta">தொலைபேசி: +94 77 123 4567</span>
-            </a>
-        </div>
-        <a href="https://wa.me/94771234567?text=Ayubowan%20Rajanganaya!" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-            <i class="fab fa-whatsapp" style="font-size: 1.25rem;"></i>
-            <span>WhatsApp</span>
-        </a>
-    </div>
-
-    <!-- Navigation Tabs (All tabs styled with green borders) -->
-    <nav class="nav-tabs" aria-label="Main sections">
-        <button type="button" class="tab-btn active" onclick="openTab(event, 'home')">
-            <span class="si">🏠 මුල් පිටුව</span>
-            <span class="en">🏠 Home</span>
-            <span class="ta">🏠 முகப்பு</span>
-        </button>
-        <button type="button" class="tab-btn" onclick="openTab(event, 'reservoir')">
-            <span class="si">🌊 රාජාංගනය ජලාශය</span>
-            <span class="en">🌊 Reservoir</span>
-            <span class="ta">🌊 நீர்த்தேக்கம்</span>
-        </button>
-        <button type="button" class="tab-btn" onclick="openTab(event, 'agriculture')">
-            <span class="si">🌾 කෘෂිකර්මාන්තය</span>
-            <span class="en">🌾 Agriculture</span>
-            <span class="ta">🌾 விவசாயம்</span>
-        </button>
-        <button type="button" class="tab-btn" onclick="openTab(event, 'fisheries')">
-            <span class="si">🐟 ධීවර කර්මාන්තය</span>
-            <span class="en">🐟 Fisheries</span>
-            <span class="ta">🐟 மீன்பிடி</span>
-        </button>
-        <button type="button" class="tab-btn" onclick="openTab(event, 'tourism')">
-            <span class="si">📸 සංචාරක කර්මාන්තය</span>
-            <span class="en">📸 Tourism</span>
-            <span class="ta">📸 சுற்றுலா</span>
-        </button>
-        <button type="button" class="tab-btn" onclick="openTab(event, 'lifestyle')">
-            <span class="si">🏡 ජන ජීවිතය</span>
-            <span class="en">🏡 Lifestyle</span>
-            <span class="ta">🏡 மக்கள் வாழ்க்கை</span>
-        </button>
-        <button type="button" class="tab-btn" onclick="openTab(event, 'history')">
-            <span class="si">🏛️ ඉතිහාසය</span>
-            <span class="en">🏛️ History</span>
-            <span class="ta">🏛️ வரலாறு</span>
-        </button>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="container">
-
-        <!-- 1. HOME TAB -->
-        <section id="home" class="tab-content active">
-            <h2 class="section-title">
-                <span class="si">රාජාංගනයට සාදරයෙන් පිළිගනිමු</span>
-                <span class="en">Welcome to Rajanganaya</span>
-                <span class="ta">ராஜாங்கனயவிற்கு வரவேற்கிறோம்</span>
-            </h2>
-            <p style="margin-top: 10px;">
-                <span class="si">අනුරාධපුර දිස්ත්‍රික්කයේ පිහිටි රාජාංගනය යනු සශ්‍රීක කෙත්වතු, මනරම් රාජාංගනය ජලාශය සහ ආගන්තුක සත්කාරයට ලැදි ජනතාවක් වෙසෙන සුන්දර ප්‍රදේශයකි.</span>
-                <span class="en">Located in the Anuradhapura District, Rajanganaya is a picturesque region blessed with lush paddy fields, the scenic Rajanganaya Reservoir, and warm, hospitable people.</span>
-                <span class="ta">அனுராதபுரம் மாவட்டத்தில் அமைந்துள்ள ராஜாங்கனய, பசுமையான நெல் வயல்கள், அழகிய ராஜாங்கனய நீர்த்தேக்கம் மற்றும் அன்பான மக்களைக் கொண்ட அழகிய பிரதேசமாகும்.</span>
-            </p>
-
-            <!-- Photo 1, Photo 2, Photo 3 Gallery -->
-            <div class="photo-grid">
-                <div class="photo-card">
-                    <img src="photo1.jpg" alt="Rajanganaya View 1">
-                    <div class="photo-card-caption">
-                        <span class="si">රාජාංගනය ජලාශයේ මනරම් දසුනක්</span>
-                        <span class="en">Scenic View of Rajanganaya Reservoir</span>
-                        <span class="ta">ராஜாங்கனய நீர்த்தேக்கத்தின் அழகிய காட்சி</span>
-                    </div>
-                </div>
-                <div class="photo-card">
-                    <img src="photo2.jpg" alt="Rajanganaya View 2">
-                    <div class="photo-card-caption">
-                        <span class="si">සශ්‍රීක කෙත්වතු සහ ගොවි බිම්</span>
-                        <span class="en">Lush Green Paddy Fields</span>
-                        <span class="ta">பசுமையான நெல் வயல்கள்</span>
-                    </div>
-                </div>
-                <div class="photo-card">
-                    <img src="photo3.jpg" alt="Rajanganaya View 3">
-                    <div class="photo-card-caption">
-                        <span class="si">සොබාදහමේ අසිරිය</span>
-                        <span class="en">Natural Beauty of Rajanganaya</span>
-                        <span class="ta">ராஜாங்கனயவின் இயற்கை அழகு</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. RESERVOIR TAB -->
-        <section id="reservoir" class="tab-content">
-            <h2 class="section-title">
-                <span class="si">රාජාංගනය ජලාශය</span>
-                <span class="en">Rajanganaya Reservoir</span>
-                <span class="ta">ராஜாங்கனய நீர்த்தேக்கம்</span>
-            </h2>
-            <div class="split-section">
-                <div>
-                    <p class="si">
-                        කලා ඔය හරස් කරමින් ඉදිකර ඇති රාජාංගනය ජලාශය අනුරාධපුර සහ කුරුණෑගල දිස්ත්‍රික්ක මායිමේ පිහිටි විශාලතම ජලාශයකි. අක්කර අඩි 81,000කට අධික ජල ධාරිතාවකින් යුක්ත මෙම ජලාශය ප්‍රදේශයේ පානීය ජල අවශ්‍යතාවය සහ කෘෂිකාර්මික කටයුතු සඳහා ප්‍රධාන ජල මූලාශ්‍රය වේ.
-                    </p>
-                    <p class="en">
-                        Built across the Kala Oya river, the Rajanganaya Reservoir is one of the largest reservoirs bordering the Anuradhapura and Kurunegala districts. Holding over 81,000 acre-feet of water, it serves as a vital source for drinking water and irrigation.
-                    </p>
-                    <p class="ta">
-                        கலா ஓயா குறுக்கே கட்டப்பட்ட ராஜாங்கனய நீர்த்தேக்கம், அனுராதபுரம் மற்றும் குருநாகல் மாவட்ட எல்லையில் அமைந்துள்ள மிகப்பெரிய நீர்த்தேக்கங்களில் ஒன்றாகும். 81,000 ஏக்கர் அடிக்கு மேல் நீர் கொள்ளளவு கொண்ட இது விவசாயம் மற்றும் குடிநீருக்கு முக்கிய ஆதாரமாக உள்ளது.
-                    </p>
-                </div>
-                <img src="photo5.jpg" onerror="this.onerror=null; this.src='photo1.jpg';" alt="Rajanganaya Reservoir">
-            </div>
-        </section>
-
-        <!-- 3. AGRICULTURE TAB -->
-        <section id="agriculture" class="tab-content">
-            <h2 class="section-title">
-                <span class="si">රාජාංගනය කෘෂිකර්මාන්තය</span>
-                <span class="en">Agriculture in Rajanganaya</span>
-                <span class="ta">ராஜாங்கனய விவசாயம்</span>
-            </h2>
-            <div class="split-section">
-                <img src="photo6.jpg" onerror="this.onerror=null; this.src='photo2.jpg';" alt="Agriculture in Rajanganaya">
-                <div>
-                    <p class="si">
-                        රාජාංගනය යනු ප්‍රධාන වී සහ අතිරේක බෝග නිෂ්පාදන කලාපයකි. යල සහ මහ කන්න දෙකේදීම රාජාංගනය ජලාශයේ ජලයෙන් අක්කර දහස් ගණනක වී වගා කෙරේ. වී වගාවට අමතරව කෙසෙල්, බඩඉරිඟු, එළවළු සහ පලතුරු වගාවන්ද සාර්ථකව සිදු කෙරේ.
-                    </p>
-                    <p class="en">
-                        Rajanganaya is a major hub for paddy and cash crop production. Irrigated during both Yala and Maha seasons, thousands of acres of paddy are cultivated alongside bananas, maize, vegetables, and fruits.
-                    </p>
-                    <p class="ta">
-                        ராஜாங்கனய நெல் மற்றும் பயறுவகை உற்பத்தியில் முக்கியப் பங்கு வகிக்கிறது. யாலா மற்றும் மகா காலங்களில் ஆயிரக்கணக்கான ஏக்கரில் நெல் பயிரிடப்படுவதுடன், வாழை, சோளம், காய்கறிகள் மற்றும் பழங்களும் விளைவிக்கப்படுகின்றன.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. FISHERIES TAB -->
-        <section id="fisheries" class="tab-content">
-            <h2 class="section-title">
-                <span class="si">රාජාංගනය ධීවර කර්මාන්තය</span>
-                <span class="en">Inland Fisheries</span>
-                <span class="ta">உள்நாட்டு மீன்பிடித் தொழில்</span>
-            </h2>
-            <div class="split-section">
-                <div>
-                    <p class="si">
-                        රාජාංගනය ජලාශය ආශ්‍රිතව මිරිදිය ධීවර කර්මාන්තය ඉතා දියුණු මට්ටමක පවතී. පවුල් සිය ගණනකගේ ප්‍රධාන ජීවනෝපාය වන්නේ මිරිදිය මසුන් ඇල්ලීමයි. තිලාපියා, කැට්ලා, රෝහු සහ ලූලා වැනි මත්ස්‍ය විශේෂ බහුලව මෙහිදී අල්ලා ගැනේ.
-                    </p>
-                    <p class="en">
-                        Freshwater fishing thrives around the Rajanganaya Reservoir, providing the livelihood for hundreds of families. Varieties like Tilapia, Catla, Rohu, and Snakehead are harvested daily.
-                    </p>
-                    <p class="ta">
-                        ராஜாங்கனய நீர்த்தேக்கத்தைச் சுற்றி நன்னீர் மீன்பிடித் தொழில் சிறப்பாக நடைபெறுகிறது. நூற்றுக்கணக்கான குடும்பங்களுக்கு இது முக்கிய வாழ்வாதாரமாக உள்ளது. திலாப்பியா, கட்லா, ரோகு மற்றும் விரால் மீன்கள் அதிகம் பிடிக்கப்படுகின்றன.
-                    </p>
-                </div>
-                <img src="photo7.jpg" onerror="this.onerror=null; this.src='photo3.jpg';" alt="Fisheries in Rajanganaya">
-            </div>
-        </section>
-
-        <!-- 5. TOURISM TAB -->
-        <section id="tourism" class="tab-content">
-            <h2 class="section-title">
-                <span class="si">රාජාංගනය සංචාරක කර්මාන්තය</span>
-                <span class="en">Tourism & Attractions</span>
-                <span class="ta">சுற்றுலா மற்றும் இடங்கள்</span>
-            </h2>
-            <div class="split-section">
-                <img src="photo8.jpg" onerror="this.onerror=null; this.src='photo4.jpg';" alt="Tourism in Rajanganaya">
-                <div>
-                    <p class="si">
-                        සොබාදහමට ආදරය කරන සංචාරකයින්ට රාජාංගනය කදිම ගමනාන්තයකි. සන්ධ්‍යා කාලයේ වැව් බැම්ම මත සිට හිරු බැස යන දසුන නැරඹීම, කුරුල්ලන් නැරඹීම සහ අසල පිහිටි විල්පත්තු ජාතික වනෝද්‍යානයට පිවිසීම සංචාරකයින්ට අපූරු අත්දැකීමකි.
-                    </p>
-                    <p class="en">
-                        Rajanganaya is a peaceful retreat for nature lovers. Sunset views from the reservoir bund, bird watching, and proximity to Wilpattu National Park make it memorable for visitors.
-                    </p>
-                    <p class="ta">
-                        இயற்கையை விரும்பும் பயணிகளுக்கு ராஜாங்கனய சிறந்த இடமாகும். மாலையில் நீர்த்தேக்கக் கரையிலிருந்து சூரிய அஸ்தமனத்தைக் காண்பது, பறவைகளைப் பார்ப்பது மற்றும் வில்பத்து தேசியப் பூங்காவிற்கு அருகாமையில் இருப்பது சிறப்பம்சமாகும்.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. LIFESTYLE TAB -->
-        <section id="lifestyle" class="tab-content">
-            <h2 class="section-title">
-                <span class="si">රාජාංගනය ජන ජීවිතය</span>
-                <span class="en">People & Lifestyle</span>
-                <span class="ta">மக்கள் மற்றும் வாழ்க்கை முறை</span>
-            </h2>
-            <div class="split-section">
-                <div>
-                    <p class="si">
-                        රාජාංගනය ජනපද ව්‍යාපාරය යටතේ දිවයිනේ විවිධ ප්‍රදේශවලින් පැමිණ පදිංචි වූ ජනතාව ඉතා සමගියෙන් සහ අන්‍යෝන්‍ය සහයෝගයෙන් ජීවත් වෙති. කෘෂිකාර්මික චාරිත්‍ර, සංස්කෘතික උත්සව සහ ආගමික වතාවත් ඔවුන්ගේ ජීවිතයේ වැදගත් අංගයන් වේ.
-                    </p>
-                    <p class="en">
-                        Settled under the Rajanganaya colonization scheme from across the country, residents live in harmony and mutual support. Agricultural traditions, cultural festivals, and religious practices shape their community life.
-                    </p>
-                    <p class="ta">
-                        ராஜாங்கனய குடியேற்றத் திட்டத்தின் கீழ் நாட்டின் பல்வேறு பகுதிகளிலிருந்தும் வந்து குடியேறிய மக்கள் ஒற்றுமையுடன் வாழ்கின்றனர். விவசாய மரபுகள், கலாச்சார விழாக்கள் மற்றும் சமய நிகழ்வுகள் அவர்களின் வாழ்க்கையில் முக்கிய இடம் வகிக்கின்றன.
-                    </p>
-                </div>
-                <img src="photo9.jpg" onerror="this.onerror=null; this.src='photo2.jpg';" alt="Lifestyle in Rajanganaya">
-            </div>
-        </section>
-
-        <!-- 7. HISTORY TAB -->
-        <section id="history" class="tab-content">
-            <h2 class="section-title">
-                <span class="si">රාජාංගනය ඉතිහාසය</span>
-                <span class="en">History of Rajanganaya</span>
-                <span class="ta">ராஜாங்கனய வரலாறு</span>
-            </h2>
-            <div class="split-section">
-                <img src="photo10.jpg" onerror="this.onerror=null; this.src='photo1.jpg';" alt="History of Rajanganaya">
-                <div>
-                    <p class="si">
-                        රාජාංගනයට අනුරාධපුර යුගය දක්වා දිවෙන දීර්ඝ ඉතිහාසයක් ඇත. පුරාණ රාජාංගන රජමහා විහාරය, ශෛලමය බුද්ධ ප්‍රතිමා සහ පුරාවිද්‍යාත්මක නටබුන් මගින් මෙම ප්‍රදේශයේ පෞරාණික ශ්‍රී විභූතිය මැනවින් පෙන්නුම් කරයි.
-                    </p>
-                    <p class="en">
-                        Rajanganaya has a deep history reaching back to the Anuradhapura era. The ancient Rajanganaya Raja Maha Viharaya, stone Buddha statues, and archaeological remains highlight its rich heritage.
-                    </p>
-                    <p class="ta">
-                        ராஜாங்கனய அனுராதபுர காலம் வரையிலான நீண்ட வரலாற்றைக் கொண்டுள்ளது. பண்டைய ராஜாங்கனய ரஜமஹா விகாரை, கல் புத்தர் சிலைகள் மற்றும் தொல்லியல் எச்சங்கள் இதன் பழமையான பெருமையைக் காட்டுகின்றன.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/94771234567?text=Ayubowan%20Rajanganaya!" target="_blank" rel="noopener noreferrer" class="floating-wa" title="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Footer -->
-    <footer>
-        <p>
-            <span class="si">© 2026 සුන්දර රාජාංගනය. සියලුම හිමිකම් ඇවිරිණි.</span>
-            <span class="en">© 2026 Beautiful Rajanganaya. All Rights Reserved.</span>
-            <span class="ta">© 2026 அழகிய ராஜாங்கனய. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span>
-        </p>
-    </footer>
-
-    <!-- JavaScript for Tabs and 3-Language Switching -->
-    <script>
-        function setLanguage(lang) {
-            document.documentElement.lang = lang;
-            document.body.className = 'lang-' + lang;
-            
-            document.getElementById('btn-si').classList.remove('active');
-            document.getElementById('btn-en').classList.remove('active');
-            document.getElementById('btn-ta').classList.remove('active');
-            document.getElementById('btn-' + lang).classList.add('active');
-        }
-
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
-
-</body>
-</html>
+        <!-- Santa Sleigh Pulled by Reindeer (Stays inside .hero-cover) -->
+        <div class="santa-sleigh-layer" aria-hidden="true">
+            <div class="santa-sleigh-track">
+                <svg class="santa-sleigh-svg" viewBox="0 0 260 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Reindeer -->
+                    <g fill="#6d4c41">
+                        <!-- Body -->
+                        <ellipse cx="212" cy="48" rx="17" ry="9" />
+                        <!-- Neck & Head -->
+                        <path d="M225 43 L236 29 L244 32 L233 48 Z" />
+                        <!-- Tail -->
+                        <circle cx="195" cy="45" r="3" fill="#fff8e1" />
+                        <!-- Legs -->
+                        <line x1="201" y1="55" x2="196" y2="69" stroke="#5d4037" stroke-width="3" stroke-linecap="round" />
+                        <line x1="208" y1="56" x2="206" y2="70" stroke="#5d4037" stroke-width="3" stroke-linecap="round" />
+                        <line x1="219" y1="56" x2="224" y2="69" stroke="#5d4037" stroke-width="3" stroke-linecap="round" />
+                        <line x1="224" y1="55" x2="231" y2="68" stroke="#5d4037" stroke-width="3" stroke-linecap="round" />
+                        <!-- Antlers -->
+                        <path d="M236 29 L232 18 M234 23 L228 21 M238 28 L241 17 M239 22 L245 20" stroke="#ffe082" stroke-width="2
